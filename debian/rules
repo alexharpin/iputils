@@ -58,7 +58,11 @@ binary-indep: build install
 	dh_compress
 	dh_fixperms
 	dh_installdeb
-	dh_gencontrol
+	if [ -f "../.VYOS_DEV_BUILD" ]; \
+		then dh_gencontrol -- -v999.dev; \
+	else \
+		dh_gencontrol; \
+	fi
 	dh_md5sums
 	dh_builddeb
 
@@ -93,7 +97,11 @@ binary-arch: build install
 	ln -sf tracepath.8.gz debian/iputils-tracepath/usr/share/man/man8/tracepath6.8.gz
 	dh_installdeb
 	dh_shlibdeps
-	dh_gencontrol
+	if [ -f "../.VYOS_DEV_BUILD" ]; \
+		then dh_gencontrol -- -v999.dev; \
+	else \
+		dh_gencontrol; \
+	fi
 	dh_md5sums
 	dh_builddeb
 
