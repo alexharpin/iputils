@@ -36,7 +36,7 @@ Description: Tools to trace the network path to a remote host
 Package: iputils-arping
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: suidmanager (<< 0.50), arping, iputils-ping (<<20001110-6)
+Conflicts: suidmanager (<< 0.50), arping
 Replaces: netbase (<< 4.00)
 Description: Tool to send ICMP echo requests to an ARP address
  The arping command acts like the standard ping command except it pings
