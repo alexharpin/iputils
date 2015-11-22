@@ -1,3 +1,10 @@
+iputils (3:20101006+vyos2+lithium2) unstable; urgency=low
+
+  [ Alex Harpin ]
+  * iputils: remove debian conflict settings for development builds
+
+ -- Alex Harpin <development@landsofshadow.co.uk>  Sun, 22 Nov 2015 16:56:07 +0000
+
 iputils (3:20101006+vyos2+lithium1) unstable; urgency=low
 
   [ Alex Harpin ]
